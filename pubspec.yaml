@@ -1,5 +1,5 @@
-name: helloworld
-description: A new Flutter project.
+name: orca
+description: A social media app aimed at helping people make smart investing decisions through the power of connecting with others.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  supabase_flutter: ^1.6.1
+  flutter_login: ^3.2.0
 
 dev_dependencies:
   flutter_test:
