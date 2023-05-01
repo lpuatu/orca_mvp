@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:orca/orca_home.dart';
-import 'package:orca/orca_login.dart';
+import 'package:orca/pages/orca_home.dart';
+import 'package:orca/pages/orca_login.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Social Media App',
+    title: 'Orcas',
     theme: ThemeData(
       primarySwatch: buildMaterialColor(const Color(0xff354a4d)),
       //primaryColor: const Color(0xff354a4d),
     ),
-    home: LoginPage(),
+    home: HomePage(),
+    //home: LoginPage(),
   ));
 }
 

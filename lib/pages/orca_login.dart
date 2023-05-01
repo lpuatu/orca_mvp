@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:orca/orca_home.dart';
+import 'package:orca/pages/orca_home.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -31,11 +31,12 @@ class _LoginPageState extends State<LoginPage> {
       final Session? session = response.session;
       final User? user = response.user;
 
-      print('login success!');
       Navigator.push(
         context,
         MaterialPageRoute(builder: (BuildContext context) => HomePage()),
       );
+    } else {
+      print('login failed...');
     }
   }
 

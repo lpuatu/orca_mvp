@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orca/widgets/navbar.dart';
 
 class HomePage extends StatelessWidget {
   final List<String> posts = [
@@ -11,7 +12,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Social Media App'),
+        title: const Text('Orcas'),
+        automaticallyImplyLeading: false,
       ),
       body: ListView.builder(
         itemCount: posts.length,
@@ -22,15 +24,7 @@ class HomePage extends StatelessWidget {
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => CreatePostPage()),
-          );
-        },
-        child: Icon(Icons.add),
-      ),
+      bottomNavigationBar: NavBar(),
     );
   }
 }
